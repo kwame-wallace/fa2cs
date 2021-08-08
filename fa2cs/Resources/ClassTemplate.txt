@@ -8,6 +8,10 @@ namespace FontAwesome
         public string[] Styles { get; set; }
         public string Url { get; set; }
         public string FaName { get; set; }
+        public override string ToString()
+        {
+            return Unicode;
+        }
     }
 
     /// <summary>
