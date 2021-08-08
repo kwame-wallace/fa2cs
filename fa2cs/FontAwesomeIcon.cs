@@ -32,13 +32,16 @@ namespace fa2cs
         {
             get
             {
-                List<Style> all = new List<Style>();
+                var all = new List<Style>();
+                
                 all.AddRange(Styles);
+                
                 var distinct = all.Distinct().ToList();
 
                 distinct.Sort();
 
-                var styles = distinct.Select(d => d.ToString() + ((Membership.Pro.Contains(d) && !Membership.Free.Contains(d)) ? " (Pro)" : ""));
+                var styles = distinct.Select(d =>
+                    $"\"{d + ((Membership.Pro.Contains(d) && !Membership.Free.Contains(d)) ? " (Pro)" : "")}\"");
 
                 return string.Join(", ", styles);
             }

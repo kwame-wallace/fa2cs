@@ -5,4 +5,11 @@
         /// <para/>
         /// See $link$
         /// </summary>
-        public const string $dotnet_name$ = "\u$code$";
+
+        public static FontAwesomeIcon $dotnet_name$ = new FontAwesomeIcon()
+        {
+            FaName = "fa-$name$",
+            Unicode = "\u$code$",
+            Styles = new []{$styles$},
+            Url = "$link$"
+        };
