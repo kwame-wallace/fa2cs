@@ -35,9 +35,11 @@ namespace fa2cs
 
             var code = codeWriter.Write(icons);
 
-            File.WriteAllText(Path.Combine(exportPath, "FontAwesomeIcons.cs"), code);
+            var file = Path.Combine(exportPath, "FontAwesomeIcons.cs");
 
-            OpenFileHelper.OpenAndSelect(exportPath);
+            File.WriteAllText(file, code);
+
+            OpenFileHelper.OpenAndSelect(file);
         }
     }
 }
