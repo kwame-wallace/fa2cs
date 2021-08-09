@@ -29,6 +29,7 @@ namespace fa2cs
             Directory.CreateDirectory(outputPath);
 
             var downloader = new FontAwesomeDownloader();
+
             var codeWriter = new CodeWriter();
 
             var icons = await downloader.DownloadIconCodes(Endpoint);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FontAwesome
 {
@@ -24,5 +25,26 @@ namespace FontAwesome
     public static partial class FontAwesomeIcons
     {
 $properties$
+
+        private static Dictionary<string, FontAwesomeIcon> _all = new Dictionary<string, FontAwesomeIcon>();
+
+        public static Dictionary<string, FontAwesomeIcon> All
+        {
+            get
+            {
+                if (_all == null)
+                {
+                    _all = InitAll();
+                }
+                return _all;
+            }
+        }
+
+        public static Dictionary<string, FontAwesomeIcon> InitAll()
+        {
+$enumerable$
+            return _all;
+        }
+
     }
 }

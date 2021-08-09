@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using fa2cs.Helpers;
 
 namespace fa2cs
@@ -16,6 +17,8 @@ namespace fa2cs
             var propertyTemplate = ResourcesHelper.ReadResourceContent("PropertyTemplate.txt");
 
             var properties = new List<string>();
+            
+            var enumerables = new StringBuilder();
 
             foreach (var icon in icons)
             {
@@ -26,10 +29,15 @@ namespace fa2cs
                                        .Replace("$styles$", icon.StylesSummary);
 
                 properties.Add(property);
+
+                enumerables.AppendLine($"\t\t\t\tAll.Add({icon.DotNetName}.FaName, {icon.DotNetName});");
             }
 
             var separator = Environment.NewLine + Environment.NewLine;
+            
             var code = string.Join(separator, properties);
+
+            classTemplate = classTemplate.Replace("$enumerable$", enumerables.ToString());
 
             return classTemplate.Replace("$properties$", code);
         }
