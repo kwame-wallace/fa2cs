@@ -17,7 +17,7 @@ Becomes this:
 
 ```
 // Obviously a check icon from FontAwesome! 😊👍
-submitButton.Text = FontAwesome.FontAwesomeIcons.Check;
+submitButton.Text = FontAwesome.FontAwesomeIcons.Check.ToString();
 ```
 
 The end result is cleaner, more readable and more maintainable code.
