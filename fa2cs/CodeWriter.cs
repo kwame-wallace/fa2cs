@@ -30,7 +30,7 @@ namespace fa2cs
 
                 properties.Add(property);
 
-                enumerables.AppendLine($"\t\t\t\tAll.Add({icon.DotNetName}.FaName, {icon.DotNetName});");
+                enumerables.AppendLine($"\t\t\t\t_all.Add({icon.DotNetName}.FaName, {icon.DotNetName});");
             }
 
             var separator = Environment.NewLine + Environment.NewLine;

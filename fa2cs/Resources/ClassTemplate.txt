@@ -5,13 +5,13 @@ namespace FontAwesome
 {
     public class FontAwesomeIcon
     {
-        public string Unicode { get; set; }
+        public char Unicode { get; set; }
         public string[] Styles { get; set; }
         public string Url { get; set; }
         public string FaName { get; set; }
         public override string ToString()
         {
-            return Unicode;
+            return Unicode.ToString();
         }
     }
 
@@ -32,7 +32,7 @@ $properties$
         {
             get
             {
-                if (_all == null)
+                if (_all.Keys.Count == 0)
                 {
                     _all = InitAll();
                 }

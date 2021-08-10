@@ -9,7 +9,7 @@
         public static FontAwesomeIcon $dotnet_name$ = new FontAwesomeIcon()
         {
             FaName = "fa-$name$",
-            Unicode = "\u$code$",
+            Unicode = '\u$code$',
             Styles = new []{$styles$},
             Url = "$link$"
         };
