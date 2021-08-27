@@ -25,6 +25,7 @@ namespace fa2cs
                 var property = propertyTemplate.Replace("$link$", icon.Url)
                                        .Replace("$name$", icon.Name)
                                        .Replace("$code$", icon.Unicode)
+                                       .Replace("$secondaryCode$", icon.SecondaryUnicode)
                                        .Replace("$dotnet_name$", icon.DotNetName)
                                        .Replace("$styles$", icon.StylesSummary);
 

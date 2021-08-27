@@ -16,11 +16,13 @@ namespace fa2cs
             Name = attr.Id;
             DotNetName = DotNetNameHelper.ToDotNetName(Name);
             Unicode = attr.Unicode;
+            SecondaryUnicode = "0010" + attr.Unicode;
             Url = "https://fontawesome.com/icons/" + attr.Id;
             Styles = attr.Styles?.ToList() ?? new List<Style>();
             Membership = attr.Membership;
         }
 
+        public string SecondaryUnicode { get; set; }
         public string Name { get; }
         public string Unicode { get; }
         public string Url { get; }

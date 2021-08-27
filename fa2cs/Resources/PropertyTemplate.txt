@@ -10,6 +10,7 @@
         {
             FaName = "fa-$name$",
             Unicode = '\u$code$',
+            SecondaryUnicode = "\U$secondaryCode$",
             Styles = new []{$styles$},
             Url = "$link$"
         };
